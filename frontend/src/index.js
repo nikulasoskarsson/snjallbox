@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.scss';
 import App from './App';
 import firebase from 'firebase';
+import * as serviceWorker from './serviceWorker';
 
 // Your web app's Firebase configuration
 
@@ -20,3 +21,5 @@ firebase.initializeApp(firebaseConfig);
 // Initialize Firebase
 
 ReactDOM.render(<App />, document.getElementById('root'));
+
+serviceWorker.unregister();
